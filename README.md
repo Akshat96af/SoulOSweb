@@ -3,7 +3,7 @@
   <br />
 
   # Soul OS
-  ### *Familiar by instinct. Personal by design. A considered space for the way you think.*
+  ### *macOS polish, Windows familiarity, and Linux freedom — in one fluid web OS.*
 
   <br />
 
