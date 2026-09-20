@@ -131,7 +131,7 @@ Soul OS reimagines desktop computing for the browser — combining native window
         &nbsp;&bull;&nbsp;
         <a href="https://instagram.com/_.a.k.s.h.a.t._">Instagram</a>
         &nbsp;&bull;&nbsp;
-        <a href="https://akshat96af.github.io/SoulOS/">Live Preview</a>
+        <a href="#">LinkedIn</a>
       </p>
     </td>
   </tr>
