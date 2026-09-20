@@ -27,8 +27,6 @@
       &nbsp;&bull;&nbsp;
       <a href="#core-capabilities">Capabilities</a>
       &nbsp;&bull;&nbsp;
-      <a href="#system-architecture">Architecture</a>
-      &nbsp;&bull;&nbsp;
       <a href="#author">Author</a>
     </b>
   </p>
@@ -107,72 +105,7 @@ Soul OS reimagines desktop computing for the browser — combining native window
 
 ---
 
-## Keyboard Shortcuts
-
-| Key Combination | Action |
-|:---|:---|
-| <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>K</kbd> | Toggle Spotlight Search |
-| <kbd>Ctrl</kbd> + <kbd>`</kbd> &nbsp;or&nbsp; <kbd>Alt</kbd> + <kbd>Tab</kbd> | Cycle focus between active windows |
-| <kbd>Esc</kbd> | Dismiss active panel, overlay, or context menu |
-| <kbd>Enter</kbd> / <kbd>=</kbd> | Calculate expression in Calculator |
-| <kbd>Double Click</kbd> | Open folder or launch file in associated app |
-
-<br />
-
----
-
-## System Architecture
-
-Modular, decoupled architecture with strict type safety and zero external runtime services:
-
-```
-src/
-|-- core/                  # Headless Services & State Stores
-|   |-- windows.ts         # Window manager, z-indexing, edge snapping & workspaces
-|   |-- settings.ts        # Persisted settings with automated migration schema (v1-v6)
-|   |-- filesystem.ts      # Virtual filesystem tree & file associations
-|   |-- sound.ts           # Central Web Audio acoustic feedback service
-|   |-- motion.ts          # Spring motion configs & reduced-motion queries
-|   |-- battery.ts         # Web Battery Status API integration
-|   |-- registry.ts        # App manifests & wallpaper metadata
-|   `-- shortcuts.ts       # Global keyboard event dispatcher
-|
-|-- shell/                 # Desktop Shell & Composites
-|   |-- Desktop.tsx        # Master desktop canvas & context menus
-|   |-- TopBar.tsx         # System status bar & panel anchors
-|   |-- Dock.tsx           # Continuous proximity magnetic dock
-|   |-- Window.tsx         # Resizable window frames & spatial transitions
-|   |-- ControlCenter.tsx  # Quick settings and sliders
-|   |-- Search.tsx         # Spotlight command palette
-|   |-- Workspaces.tsx     # Virtual desktop switcher
-|   |-- StatusPanels.tsx   # Clock, date, and battery subpanels
-|   `-- Boot.tsx           # Entrance view & session initialization
-|
-|-- apps/                  # Sandboxed Application Suite
-|   |-- Files.tsx          # Virtual file manager with trash & imports
-|   |-- Notes.tsx          # Local notepad with real-time save
-|   |-- Gallery.tsx        # Image showcase & wallpaper switcher
-|   |-- Video.tsx          # Blob-based video player
-|   |-- Calculator.tsx     # Arithmetic engine with keyboard support
-|   |-- Browser.tsx        # Web query interface & external launcher
-|   `-- Settings.tsx       # System preferences & developer notes
-|
-`-- styles.css             # Design tokens & glassmorphic materials
-```
-
-### Tech Stack
-- **React 19 & TypeScript 5.7**: Strict component hierarchy and typed interfaces.
-- **Zustand 5**: Multi-store state management with local schema migrations.
-- **Motion 12**: Continuous spring dynamics and reduced-motion compliance.
-- **react-rnd**: Controlled geometric dragging and resizing bounds.
-- **Lucide Icons**: Uniform SVG iconography.
-- **Typography**: Variable distributions of DM Sans and Manrope.
-
-<br />
-
----
-
-## Source Code & Deployment
+## Deployment & Live Preview
 
 > [!NOTE]
 > The source codebase and build pipelines for **Soul OS** are maintained in a **private repository** for portfolio showcase.
