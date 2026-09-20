@@ -1,34 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 46" width="240" height="46" fill="none">
   <defs>
-    <linearGradient id="btnBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3b4635"/>
-      <stop offset="100%" stop-color="#232a1f"/>
-    </linearGradient>
-    <linearGradient id="btnStroke" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#5e7153"/>
-      <stop offset="100%" stop-color="#343d2e"/>
-    </linearGradient>
-    <filter id="btnGlow" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.3"/>
+    <!-- Soft ambient shadow -->
+    <filter id="btnShadow" x="-15%" y="-20%" width="130%" height="150%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/>
     </filter>
+    
+    <!-- Obsidian glass gradient -->
+    <linearGradient id="glassFill" x1="0" y1="0" x2="0" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1d241b"/>
+      <stop offset="100%" stop-color="#0e130d"/>
+    </linearGradient>
+
+    <!-- Hairline luxury border -->
+    <linearGradient id="hairline" x1="0" y1="0" x2="0" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="45%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Subtle animated light shimmer across the surface -->
+    <linearGradient id="sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.07">
+        <animate attributeName="offset" values="-0.3; 1.3" dur="4.5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
   </defs>
-  
-  <rect x="2" y="2" width="236" height="40" rx="20" fill="url(#btnBg)" stroke="url(#btnStroke)" stroke-width="1.2" filter="url(#btnGlow)"/>
-  
-  <!-- Live Status Pulse -->
-  <circle cx="28" cy="22" r="4" fill="#4ade80">
-    <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="28" cy="22" r="6.5" stroke="#4ade80" stroke-width="1" fill="none" opacity="0.4">
-    <animate attributeName="r" values="4;8.5;4" dur="2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  
-  <!-- Text -->
-  <text x="44" y="26.5" fill="#f2f6f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="13" font-weight="600" letter-spacing="0.4">
+
+  <!-- Button Body -->
+  <rect x="2" y="2" width="236" height="42" rx="21" fill="url(#glassFill)" filter="url(#btnShadow)"/>
+  <rect x="2" y="2" width="236" height="42" rx="21" fill="url(#sheen)"/>
+  <rect x="2" y="2" width="236" height="42" rx="21" stroke="url(#hairline)" stroke-width="1"/>
+
+  <!-- Left: Soul Wave Glyph -->
+  <g transform="translate(24, 15)" stroke="#9db895" stroke-width="2" stroke-linecap="round" fill="none">
+    <path d="M4 1c4 0 1 14 5 14"/>
+    <path d="M0 4c4 0 1 10 5 10"/>
+    <path d="M8 1c4 0 1 10 5 10"/>
+  </g>
+
+  <!-- Center Text -->
+  <text x="52" y="27" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="13.5" font-weight="600" letter-spacing="-0.2px">
     Launch Live Desktop
   </text>
-  
-  <!-- Arrow -->
-  <path d="M198 17.5h5m0 0v5m0-5l-6.5 6.5" stroke="#a4bba0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Right: Arrow ↗ -->
+  <g transform="translate(198, 17)" stroke="#9db895" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1 9L8 2M8 2H3.5M8 2V6.5"/>
+  </g>
 </svg>
