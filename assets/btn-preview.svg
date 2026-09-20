@@ -1,44 +1,122 @@
-<button class="launch-btn" id="launchBtn" type="button">
-  <i class="bracket tl"></i><i class="bracket tr"></i>
-  <i class="bracket bl"></i><i class="bracket br"></i>
-  <span class="face">
-    <span class="sheen"></span>
-    <svg class="glyph" viewBox="0 0 20 16" fill="none">
-      <path d="M4 1c5 0 1 14 6 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-      <path d="M.5 3.5c5 0 1 9 6 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-      <path d="M8 1.5c5 0 1 9 6 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-    </svg>
-    <span class="label">Launch Live Desktop</span>
-    <span class="icon-stack">
-      <svg class="icon-arrow" viewBox="0 0 12 12"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span class="spinner"></span>
-      <svg class="icon-check" viewBox="0 0 12 12"><path d="M2 6.5 5 9.5 10 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </span>
-  </span>
-</button>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="54" viewBox="0 0 300 54" fill="none" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTplZTkwYzlmYS1jNjRlLTQ0MzEtYTZkNi05MDUwYTA2YWQ0MDQAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaKBLHSnI1cFqHngZGFORubwAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo5NDU5Nzc1YS02MmZlLTQ0NTUtYTIxMi0yNGNmMmYzZWQyMzdscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoWY5fnAEBrQzBP7CMlNIdDgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggtX3NAp1XniPJ8B+0wdCWjeek4r+ZiE266yfvfgQ0NyCkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaLo2GAUziVOsp/5OdcPpwyYAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCAKRpc+3D2AxNQmDxjKEiGUxecCaiGN5zvRfXmKs97lz2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBigZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmVlOTBjOWZhLWM2NGUtNDQzMS1hNmQ2LTkwNTBhMDZhZDQwNC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmNkZmI3NWJmLWM0OTgtNGE2Yi1iOGY5LWMwMmQ5N2YzMTM1Y3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCC1fc0CnVeeI8nwH7TB0JaN56Tiv5mITbrrJ+9+BDQ3IKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggeWfPig+nvhX+WO5S143fEMybL8jZUaSVdze/PMf3N3eiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgghC+pI9UG2N5kIPy9Smf0+aHrl6fnrXN00X1rsWWhobp0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQDiAD//xVFiSjdXXOuJWNSyCu9KeDAZR4KaZnjyH8ZGQN8SxmaCUHvUknbjLQmfwJjBPlkqmGLXqA6/qOO7sbss=</c2pa:manifest></metadata>
+  <title>Launch Live Desktop button</title>
 
-/* core rules — hover, focus and reduced-motion states live in the full source */
-.launch-btn{
-  padding:1px; border:none; border-radius:7px; cursor:pointer;
-  background:linear-gradient(135deg,rgba(146,173,137,.55),rgba(58,73,54,.18) 38%,rgba(58,73,54,.18) 62%,rgba(146,173,137,.55));
-  box-shadow:0 1px 1px rgba(0,0,0,.5), 0 12px 28px -14px rgba(0,0,0,.65);
-  transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
-}
-.launch-btn:hover{ transform:translateY(-2px); }
-.launch-btn:active{ transform:translateY(0) scale(.975); }
-.face{
-  height:3.35rem; padding:0 1.35em 0 1.05em; border-radius:6px; display:inline-flex; align-items:center; gap:.7em; overflow:hidden;
-  background:linear-gradient(180deg,#181f15,#10150d 45%,#07090a);
-  box-shadow:inset 0 1px 0 rgba(196,221,191,.4), inset 0 -1px 0 rgba(0,0,0,.4);
-}
-.bracket{ position:absolute; width:8px; height:8px; border:1.4px solid #8faa86; filter:drop-shadow(0 0 3px rgba(143,170,134,.35)); }
-.sheen{
-  position:absolute; width:20%; height:160%; top:-30%; left:-12%;
-  background:linear-gradient(100deg,transparent,rgba(255,255,255,.85) 50%,transparent);
-  animation:sheenSweep 8s cubic-bezier(.4,0,.15,1) infinite;
-}
-@keyframes sheenSweep{
-  0%{ transform:translateX(-180%) skewX(-16deg); opacity:0; }
-  6%,30%{ opacity:1; }
-  38%,100%{ transform:translateX(620%) skewX(-16deg); opacity:0; }
-}
+  <defs>
+    <clipPath id="frame"><rect x="1" y="1" width="298" height="52" rx="6" ry="6"/></clipPath>
+
+    <!-- anodized titanium-green body -->
+    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#181f15"/>
+      <stop offset="45%"  stop-color="#10150d"/>
+      <stop offset="100%" stop-color="#07090a"/>
+    </linearGradient>
+
+    <!-- machined gradient bezel -->
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#92ad89" stop-opacity="0.55"/>
+      <stop offset="38%"  stop-color="#3a4936" stop-opacity="0.18"/>
+      <stop offset="62%"  stop-color="#3a4936" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#8da885" stop-opacity="0.55"/>
+    </linearGradient>
+
+    <!-- top rim highlight -->
+    <linearGradient id="rim-top" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#c4ddbf" stop-opacity="0"/>
+      <stop offset="15%"  stop-color="#c4ddbf" stop-opacity="0.18"/>
+      <stop offset="50%"  stop-color="#c4ddbf" stop-opacity="0.4"/>
+      <stop offset="85%"  stop-color="#c4ddbf" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#c4ddbf" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- bottom depth line -->
+    <linearGradient id="rim-btm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#000" stop-opacity="0"/>
+      <stop offset="30%"  stop-color="#000" stop-opacity="0.4"/>
+      <stop offset="70%"  stop-color="#000" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- inner glass-panel highlight -->
+    <linearGradient id="inner-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c4ddbf" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#c4ddbf" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- specular sheen -->
+    <linearGradient id="sheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="35%"  stop-color="#e2f0df" stop-opacity="0.4"/>
+      <stop offset="48%"  stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="52%"  stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="65%"  stop-color="#e2f0df" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="bracket-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="1.3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="glyph-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur result="blur">
+        <animate attributeName="stdDeviation" values="1.6;3.2;1.6" dur="8s" repeatCount="indefinite"/>
+      </feGaussianBlur>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .sheen-pass{ animation: glide 8s cubic-bezier(.4,0,.15,1) infinite; }
+    @keyframes glide{
+      0%   { transform: translateX(-40px) skewX(-16deg); opacity: 0; }
+      6%   { opacity: 1; }
+      30%  { opacity: 1; }
+      38%  { transform: translateX(360px) skewX(-16deg); opacity: 0; }
+      100% { transform: translateX(-40px) skewX(-16deg); opacity: 0; }
+    }
+    .bracket-pulse{ animation: bpulse 8s ease-in-out infinite; }
+    @keyframes bpulse{
+      0%, 100% { opacity: 0.55; }
+      45%      { opacity: 1; }
+      60%      { opacity: 0.55; }
+    }
+    @media (prefers-reduced-motion: reduce){
+      .sheen-pass, .bracket-pulse{ animation: none !important; }
+    }
+  </style>
+
+  <!-- body -->
+  <rect x="1" y="1" width="298" height="52" rx="6" fill="url(#body)" stroke="url(#edge)" stroke-width="1"/>
+  <rect x="2" y="2" width="296" height="22" rx="5" fill="url(#inner-glow)"/>
+  <line x1="10" y1="1.5" x2="290" y2="1.5" stroke="url(#rim-top)" stroke-width="0.8"/>
+  <line x1="10" y1="52.5" x2="290" y2="52.5" stroke="url(#rim-btm)" stroke-width="0.8"/>
+
+  <!-- sheen sweep -->
+  <g clip-path="url(#frame)">
+    <rect class="sheen-pass" x="0" y="-8" width="16" height="70" fill="url(#sheen)"/>
+  </g>
+
+  <!-- corner brackets -->
+  <g filter="url(#bracket-glow)" class="bracket-pulse">
+    <path d="M1 10V1h9"     stroke="#8faa86" stroke-width="1.6" stroke-linecap="square" fill="none"/>
+    <path d="M299 10V1h-9"  stroke="#8faa86" stroke-width="1.6" stroke-linecap="square" fill="none"/>
+    <path d="M1 44v9h9"     stroke="#8faa86" stroke-width="1.6" stroke-linecap="square" fill="none"/>
+    <path d="M299 44v9h-9"  stroke="#8faa86" stroke-width="1.6" stroke-linecap="square" fill="none"/>
+  </g>
+
+  <!-- glyph -->
+  <g transform="translate(26,18)" filter="url(#glyph-glow)" stroke="#8faa86" stroke-width="1.8" stroke-linecap="round" fill="none">
+    <path d="M4.5 0c5.5 0 1 17 6.5 17"/>
+    <path d="M0 3.5c5.5 0 1 12.5 6.5 12.5"/>
+    <path d="M9 0.5c5.5 0 1 12.5 6.5 12.5"/>
+  </g>
+
+  <!-- label -->
+  <text x="56" y="32.5" fill="#eef2ec" font-family="'SF Pro Text',-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif" font-size="12.6" font-weight="600" letter-spacing="1.9">LAUNCH LIVE DESKTOP</text>
+
+  <!-- arrow -->
+  <g transform="translate(266,19)" stroke="#8faa86" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M0 11L9 2"/>
+    <path d="M3 2H9V8"/>
+  </g>
+</svg>
