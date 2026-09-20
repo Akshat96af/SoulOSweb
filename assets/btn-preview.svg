@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" fill="none">
+  <defs>
+    <linearGradient id="btnBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b4635"/>
+      <stop offset="100%" stop-color="#232a1f"/>
+    </linearGradient>
+    <linearGradient id="btnStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5e7153"/>
+      <stop offset="100%" stop-color="#343d2e"/>
+    </linearGradient>
+    <filter id="btnGlow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <rect x="2" y="2" width="236" height="40" rx="20" fill="url(#btnBg)" stroke="url(#btnStroke)" stroke-width="1.2" filter="url(#btnGlow)"/>
+  
+  <!-- Live Status Pulse -->
+  <circle cx="28" cy="22" r="4" fill="#4ade80">
+    <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="28" cy="22" r="6.5" stroke="#4ade80" stroke-width="1" fill="none" opacity="0.4">
+    <animate attributeName="r" values="4;8.5;4" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Text -->
+  <text x="44" y="26.5" fill="#f2f6f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, system-ui, sans-serif" font-size="13" font-weight="600" letter-spacing="0.4">
+    Launch Live Desktop
+  </text>
+  
+  <!-- Arrow -->
+  <path d="M198 17.5h5m0 0v5m0-5l-6.5 6.5" stroke="#a4bba0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

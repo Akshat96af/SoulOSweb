@@ -8,19 +8,18 @@
 
   <br />
 
-  [![Live Preview](https://img.shields.io/badge/Live_Demo-akshat96af.github.io%2FSoulOS-4d5643?style=for-the-badge&logo=googlechrome&logoColor=white)](https://akshat96af.github.io/SoulOS/)
-  [![React 19](https://img.shields.io/badge/React-19-149eca?style=for-the-badge&logo=react&logoColor=white)](https://react.dev/)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178c6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-  [![Vite](https://img.shields.io/badge/Vite-6.0-646cff?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
-  [![Motion](https://img.shields.io/badge/Motion-12-0055ff?style=for-the-badge&logo=framer&logoColor=white)](https://motion.dev/)
-  [![Zustand](https://img.shields.io/badge/Zustand-5.0-443e38?style=for-the-badge)](https://zustand-demo.pmnd.rs/)
+  <a href="https://akshat96af.github.io/SoulOS/">
+    <img src="assets/btn-preview.svg" alt="Launch Live Desktop" width="220" />
+  </a>
 
-  <br />
+  <br /><br />
+
+  <img src="assets/tech-stack.svg" alt="React 19 • TypeScript • Vite 6 • Motion • Zustand 5" width="480" />
+
+  <br /><br />
 
   <p align="center">
     <b>
-      <a href="https://akshat96af.github.io/SoulOS/">Launch Live Experience</a>
-      &nbsp;&bull;&nbsp;
       <a href="#interface-overview">Interface</a>
       &nbsp;&bull;&nbsp;
       <a href="#built-in-applications">Applications</a>
