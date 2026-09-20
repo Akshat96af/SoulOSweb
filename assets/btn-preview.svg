@@ -1,135 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="240" height="44" viewBox="0 0 240 44" fill="none">
-  <defs>
-    <!-- clipping boundary -->
-    <clipPath id="frame"><rect x="1" y="1" width="238" height="42"/></clipPath>
+<button class="launch-btn" id="launchBtn" type="button">
+  <i class="bracket tl"></i><i class="bracket tr"></i>
+  <i class="bracket bl"></i><i class="bracket br"></i>
+  <span class="face">
+    <span class="sheen"></span>
+    <svg class="glyph" viewBox="0 0 20 16" fill="none">
+      <path d="M4 1c5 0 1 14 6 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M.5 3.5c5 0 1 9 6 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M8 1.5c5 0 1 9 6 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+    <span class="label">Launch Live Desktop</span>
+    <span class="icon-stack">
+      <svg class="icon-arrow" viewBox="0 0 12 12"><path d="M2 10 10 2M4 2h6v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="spinner"></span>
+      <svg class="icon-check" viewBox="0 0 12 12"><path d="M2 6.5 5 9.5 10 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </span>
+</button>
 
-    <!-- deep anodized titanium-green body -->
-    <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#161d14"/>
-      <stop offset="45%"  stop-color="#121912"/>
-      <stop offset="100%" stop-color="#0a0f09"/>
-    </linearGradient>
-
-    <!-- machined chamfer edge gradient -->
-    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"   stop-color="#92ad89" stop-opacity="0.5"/>
-      <stop offset="35%"  stop-color="#4a5c44" stop-opacity="0.2"/>
-      <stop offset="65%"  stop-color="#3a4936" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#8da885" stop-opacity="0.4"/>
-    </linearGradient>
-
-    <!-- top-edge specular rim (brushed metal effect) -->
-    <linearGradient id="rim-top" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#8faa86" stop-opacity="0"/>
-      <stop offset="15%"  stop-color="#8faa86" stop-opacity="0.15"/>
-      <stop offset="50%"  stop-color="#c4ddbf" stop-opacity="0.35"/>
-      <stop offset="85%"  stop-color="#8faa86" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#8faa86" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- bottom-edge shadow line for depth -->
-    <linearGradient id="rim-btm" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#000" stop-opacity="0"/>
-      <stop offset="30%"  stop-color="#000" stop-opacity="0.25"/>
-      <stop offset="70%"  stop-color="#000" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- inner top highlight (Apple glass-panel effect) -->
-    <linearGradient id="inner-glow" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#c4ddbf" stop-opacity="0.06"/>
-      <stop offset="100%" stop-color="#c4ddbf" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- premium light sheen: asymmetric trailing edge for motion-blur feel -->
-    <linearGradient id="sheen" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="12%"  stop-color="#c8e0c3" stop-opacity="0.08"/>
-      <stop offset="38%"  stop-color="#e2f0df" stop-opacity="0.4"/>
-      <stop offset="48%"  stop-color="#ffffff" stop-opacity="0.88"/>
-      <stop offset="50%"  stop-color="#ffffff" stop-opacity="0.95"/>
-      <stop offset="52%"  stop-color="#ffffff" stop-opacity="0.88"/>
-      <stop offset="62%"  stop-color="#e2f0df" stop-opacity="0.35"/>
-      <stop offset="82%"  stop-color="#c8e0c3" stop-opacity="0.06"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
-
-    <!-- corner bracket ambient glow -->
-    <filter id="bracket-glow">
-      <feGaussianBlur stdDeviation="1.2" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-
-    <!-- subtle glow for the soul glyph -->
-    <filter id="glyph-glow">
-      <feGaussianBlur stdDeviation="1.8" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-  </defs>
-
-  <style>
-    .sheen-pass {
-      animation: glide 7.5s cubic-bezier(0.4, 0, 0.15, 1) infinite;
-    }
-    @keyframes glide {
-      0%   { transform: translateX(-80px) skewX(-18deg); opacity: 0; }
-      4%   { opacity: 1; }
-      32%  { opacity: 1; }
-      38%  { transform: translateX(300px) skewX(-18deg); opacity: 0; }
-      39%  { transform: translateX(-80px) skewX(-18deg); opacity: 0; }
-      100% { transform: translateX(-80px) skewX(-18deg); opacity: 0; }
-    }
-
-    .bracket-pulse {
-      animation: bPulse 7.5s ease infinite;
-    }
-    @keyframes bPulse {
-      0%   { opacity: 0.7; }
-      4%   { opacity: 1; }
-      38%  { opacity: 1; }
-      50%  { opacity: 0.7; }
-      100% { opacity: 0.7; }
-    }
-  </style>
-
-  <!-- === LAYER 1: base body === -->
-  <rect x="1" y="1" width="238" height="42" fill="url(#body)" stroke="url(#edge)" stroke-width="1"/>
-
-  <!-- === LAYER 2: inner glass-panel top highlight === -->
-  <rect x="2" y="2" width="236" height="18" fill="url(#inner-glow)"/>
-
-  <!-- === LAYER 3: top machined rim reflection === -->
-  <line x1="8" y1="1.5" x2="232" y2="1.5" stroke="url(#rim-top)" stroke-width="0.8"/>
-
-  <!-- === LAYER 4: bottom depth shadow === -->
-  <line x1="8" y1="42.5" x2="232" y2="42.5" stroke="url(#rim-btm)" stroke-width="0.8"/>
-
-  <!-- === LAYER 5: specular light sheen (14px slender pass) === -->
-  <g clip-path="url(#frame)">
-    <rect class="sheen-pass" x="0" y="-6" width="14" height="56" fill="url(#sheen)"/>
-  </g>
-
-  <!-- === LAYER 6: corner brackets with ambient glow === -->
-  <g filter="url(#bracket-glow)" class="bracket-pulse">
-    <path d="M1 9V1h8"   stroke="#8faa86" stroke-width="1.5" stroke-linecap="square" fill="none"/>
-    <path d="M239 9V1h-8" stroke="#8faa86" stroke-width="1.5" stroke-linecap="square" fill="none"/>
-    <path d="M1 35v8h8"   stroke="#8faa86" stroke-width="1.5" stroke-linecap="square" fill="none"/>
-    <path d="M239 35v8h-8" stroke="#8faa86" stroke-width="1.5" stroke-linecap="square" fill="none"/>
-  </g>
-
-  <!-- === LAYER 7: soul glyph with glow === -->
-  <g transform="translate(22,14)" filter="url(#glyph-glow)" stroke="#8faa86" stroke-width="1.6" stroke-linecap="round" fill="none">
-    <path d="M4 0c5 0 1 15 6 15"/>
-    <path d="M0 3c5 0 1 11 6 11"/>
-    <path d="M8 0c5 0 1 11 6 11"/>
-  </g>
-
-  <!-- === LAYER 8: typography === -->
-  <text x="50" y="26.5" fill="#eef2ec" font-family="'SF Pro Text',-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif" font-size="11.2" font-weight="600" letter-spacing="1.6">LAUNCH LIVE DESKTOP</text>
-
-  <!-- === LAYER 9: arrow icon === -->
-  <g transform="translate(212,14)" stroke="#8faa86" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <path d="M0 10L8 2"/>
-    <path d="M3 2H8V7"/>
-  </g>
-</svg>
+/* core rules — hover, focus and reduced-motion states live in the full source */
+.launch-btn{
+  padding:1px; border:none; border-radius:7px; cursor:pointer;
+  background:linear-gradient(135deg,rgba(146,173,137,.55),rgba(58,73,54,.18) 38%,rgba(58,73,54,.18) 62%,rgba(146,173,137,.55));
+  box-shadow:0 1px 1px rgba(0,0,0,.5), 0 12px 28px -14px rgba(0,0,0,.65);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
+}
+.launch-btn:hover{ transform:translateY(-2px); }
+.launch-btn:active{ transform:translateY(0) scale(.975); }
+.face{
+  height:3.35rem; padding:0 1.35em 0 1.05em; border-radius:6px; display:inline-flex; align-items:center; gap:.7em; overflow:hidden;
+  background:linear-gradient(180deg,#181f15,#10150d 45%,#07090a);
+  box-shadow:inset 0 1px 0 rgba(196,221,191,.4), inset 0 -1px 0 rgba(0,0,0,.4);
+}
+.bracket{ position:absolute; width:8px; height:8px; border:1.4px solid #8faa86; filter:drop-shadow(0 0 3px rgba(143,170,134,.35)); }
+.sheen{
+  position:absolute; width:20%; height:160%; top:-30%; left:-12%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.85) 50%,transparent);
+  animation:sheenSweep 8s cubic-bezier(.4,0,.15,1) infinite;
+}
+@keyframes sheenSweep{
+  0%{ transform:translateX(-180%) skewX(-16deg); opacity:0; }
+  6%,30%{ opacity:1; }
+  38%,100%{ transform:translateX(620%) skewX(-16deg); opacity:0; }
+}
