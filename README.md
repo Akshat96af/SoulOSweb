@@ -81,15 +81,15 @@ The project is guided by three principles:
 
 Soul OS includes a suite of native web applications engineered to operate independently within the desktop environment:
 
-| Application | Name | Purpose | Key Capabilities |
-|:---|:---|:---|:---|
-| <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/folder.svg" width="20"/> | **My PC (Files)** | Desktop virtual filesystem | Hierarchical folder tree, breadcrumb navigation, real-time file search, grid and list views, folder creation, inline rename, recoverable Trash, and local file import (images, markdown/text, and video). |
-| <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/file-text.svg" width="20"/> | **Notes** | Distraction-free writing environment | Multi-document repository, real-time word counting, local browser persistence, clean typographic layout, and sidebar indexing. |
-| <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/image.svg" width="20"/> | **Gallery** | Image viewer and curator | High-resolution image previewing, variable zoom control (50% to 300%), sequential carousel navigation, and direct wallpaper assignment. |
-| <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/video.svg" width="20"/> | **Video** | Client-side media playback | Zero-upload local video loading, HTML5 playback controls, and automatic object URL memory management. |
-| <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/calculator.svg" width="20"/> | **Calculator** | Desktop computation utility | Standard four-function arithmetic, percentage evaluation, sign inversion, arbitrary precision handling, and full physical keyboard input support. |
-| <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/globe.svg" width="20"/> | **Browser** | Curated web navigation portal | Unified address and query bar, URL validation, search engine fallback, and curated bookmarks launching external tabs without iframe sandbox restrictions. |
-| <img src="https://raw.githubusercontent.com/lucide-icons/lucide/main/icons/settings-2.svg" width="20"/> | **Settings** | Configuration and personalization | Visual theme switching, wallpaper selection, dock magnification scaling, volume levels, accessibility toggles, and developer documentation. |
+| Icon | Application | Purpose | Key Capabilities |
+|:---:|:---|:---|:---|
+| <img src="assets/icons/files.svg" width="36" alt="My PC" /> | **My PC (Files)** | Desktop virtual filesystem | Hierarchical folder tree, breadcrumb navigation, real-time file search, grid and list views, folder creation, inline rename, recoverable Trash, and local file import (images, markdown/text, and video). |
+| <img src="assets/icons/notes.svg" width="36" alt="Notes" /> | **Notes** | Distraction-free writing environment | Multi-document repository, real-time word counting, local browser persistence, clean typographic layout, and sidebar indexing. |
+| <img src="assets/icons/gallery.svg" width="36" alt="Gallery" /> | **Gallery** | Image viewer and curator | High-resolution image previewing, variable zoom control (50% to 300%), sequential carousel navigation, and direct wallpaper assignment. |
+| <img src="assets/icons/video.svg" width="36" alt="Video" /> | **Video** | Client-side media playback | Zero-upload local video loading, HTML5 playback controls, and automatic object URL memory management. |
+| <img src="assets/icons/calculator.svg" width="36" alt="Calculator" /> | **Calculator** | Desktop computation utility | Standard four-function arithmetic, percentage evaluation, sign inversion, arbitrary precision handling, and full physical keyboard input support. |
+| <img src="assets/icons/browser.svg" width="36" alt="Browser" /> | **Browser** | Curated web navigation portal | Unified address and query bar, URL validation, search engine fallback, and curated bookmarks launching external tabs without iframe sandbox restrictions. |
+| <img src="assets/icons/settings.svg" width="36" alt="Settings" /> | **Settings** | Configuration and personalization | Visual theme switching, wallpaper selection, dock magnification scaling, volume levels, accessibility toggles, and developer documentation. |
 
 <br />
 

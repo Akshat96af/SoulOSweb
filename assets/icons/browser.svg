@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" fill="none">
+  <defs>
+    <linearGradient id="base" x1="11" y1="4" x2="66" y2="78" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d3e7df"/>
+      <stop offset=".52" stop-color="#88b9ac"/>
+      <stop offset="1" stop-color="#2d726c"/>
+    </linearGradient>
+    <linearGradient id="ivory" x1="22" y1="14" x2="54" y2="65" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffef1"/>
+      <stop offset=".5" stop-color="#f4f0db"/>
+      <stop offset="1" stop-color="#c8cdb8"/>
+    </linearGradient>
+    <linearGradient id="core" x1="25" y1="20" x2="58" y2="61" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d3e7df"/>
+      <stop offset=".4" stop-color="#88b9ac"/>
+      <stop offset="1" stop-color="#2d726c"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0" cy="0" r="1" gradientTransform="translate(23 9) rotate(60) scale(66 74)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity=".58"/>
+      <stop offset=".7" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-45%" y="-40%" width="190%" height="205%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#2d726c" flood-opacity=".42"/>
+    </filter>
+  </defs>
+  <rect x="2" y="2" width="76" height="76" rx="19" fill="url(#base)"/>
+  <rect x="3" y="3" width="74" height="74" rx="18" fill="url(#light)"/>
+  <rect x="3" y="3" width="74" height="74" rx="18" stroke="#fff" stroke-opacity=".43" stroke-width=".8"/>
+  <path d="M14 8C18 5 23 5 31 5H55" stroke="white" stroke-opacity=".58" stroke-linecap="round"/>
+  <g filter="url(#shadow)">
+    <circle cx="40" cy="38" r="23" fill="url(#core)" stroke="#eaffef" stroke-opacity=".68" stroke-width="1.5"/>
+    <ellipse cx="40" cy="38" rx="12" ry="23" stroke="#d6eee0" stroke-width="1" stroke-opacity=".72"/>
+    <path d="M18 32c14 5 29 5 44 0M19 46c13-5 28-5 42 0M40 16v44" stroke="#d6eee0" stroke-width="1" stroke-opacity=".6"/>
+    <path d="M64 29c13 14-5 34-31 34-16 0-24-8-19-15" stroke="url(#ivory)" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="63" cy="29" r="4" fill="#f9f3d0"/>
+    <path d="M25 25c3-5 8-8 14-8" stroke="#fff" stroke-opacity=".8" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <path d="M15 73c11 4 37 4 50-1" stroke="#122e21" stroke-opacity=".15" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

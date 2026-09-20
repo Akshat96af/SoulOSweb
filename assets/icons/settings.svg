@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" fill="none">
+  <defs>
+    <linearGradient id="base" x1="11" y1="4" x2="66" y2="78" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d8ded6"/>
+      <stop offset=".52" stop-color="#a3afa0"/>
+      <stop offset="1" stop-color="#5c6c57"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="16" y1="13" x2="61" y2="69" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffef5"/>
+      <stop offset=".28" stop-color="#dce2d9"/>
+      <stop offset=".51" stop-color="#a0afa1"/>
+      <stop offset=".72" stop-color="#e4e9d9"/>
+      <stop offset="1" stop-color="#667c6f"/>
+    </linearGradient>
+    <linearGradient id="core" x1="25" y1="20" x2="58" y2="61" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d8ded6"/>
+      <stop offset=".4" stop-color="#a3afa0"/>
+      <stop offset="1" stop-color="#5c6c57"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0" cy="0" r="1" gradientTransform="translate(23 9) rotate(60) scale(66 74)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity=".58"/>
+      <stop offset=".7" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-45%" y="-40%" width="190%" height="205%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#5c6c57" flood-opacity=".42"/>
+    </filter>
+  </defs>
+  <rect x="2" y="2" width="76" height="76" rx="19" fill="url(#base)"/>
+  <rect x="3" y="3" width="74" height="74" rx="18" fill="url(#light)"/>
+  <rect x="3" y="3" width="74" height="74" rx="18" stroke="#fff" stroke-opacity=".43" stroke-width=".8"/>
+  <path d="M14 8C18 5 23 5 31 5H55" stroke="white" stroke-opacity=".58" stroke-linecap="round"/>
+  <g filter="url(#shadow)">
+    <g>
+      <rect x="35" y="10" width="10" height="18" rx="3" fill="url(#metal)" transform="rotate(0 40 40)"/>
+      <rect x="35" y="10" width="10" height="18" rx="3" fill="url(#metal)" transform="rotate(45 40 40)"/>
+      <rect x="35" y="10" width="10" height="18" rx="3" fill="url(#metal)" transform="rotate(90 40 40)"/>
+      <rect x="35" y="10" width="10" height="18" rx="3" fill="url(#metal)" transform="rotate(135 40 40)"/>
+      <rect x="35" y="10" width="10" height="18" rx="3" fill="url(#metal)" transform="rotate(180 40 40)"/>
+      <rect x="35" y="10" width="10" height="18" rx="3" fill="url(#metal)" transform="rotate(225 40 40)"/>
+      <rect x="35" y="10" width="10" height="18" rx="3" fill="url(#metal)" transform="rotate(270 40 40)"/>
+      <rect x="35" y="10" width="10" height="18" rx="3" fill="url(#metal)" transform="rotate(315 40 40)"/>
+    </g>
+    <circle cx="40" cy="40" r="25" fill="url(#metal)" stroke="#f6f8e5" stroke-width=".7"/>
+    <circle cx="40" cy="40" r="19" fill="#5c6c57" stroke="#798d79" stroke-width="2"/>
+    <circle cx="40" cy="40" r="14" fill="url(#core)" stroke="#d7dfc6" stroke-width="1.5"/>
+    <path d="M40 30v10l7 5" stroke="#f3f4dc" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="40" cy="40" r="3" fill="#e3e9ce"/>
+    <path d="M22 28a23 23 0 0117-10" stroke="#fff" stroke-opacity=".65" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <path d="M15 73c11 4 37 4 50-1" stroke="#122e21" stroke-opacity=".15" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80" fill="none">
+  <defs>
+    <linearGradient id="base" x1="11" y1="4" x2="66" y2="78" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#eee1b7"/>
+      <stop offset=".52" stop-color="#cbb67c"/>
+      <stop offset="1" stop-color="#8c7544"/>
+    </linearGradient>
+    <linearGradient id="ivory" x1="22" y1="14" x2="54" y2="65" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fffef1"/>
+      <stop offset=".5" stop-color="#f4f0db"/>
+      <stop offset="1" stop-color="#c8cdb8"/>
+    </linearGradient>
+    <radialGradient id="light" cx="0" cy="0" r="1" gradientTransform="translate(23 9) rotate(60) scale(66 74)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity=".58"/>
+      <stop offset=".7" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-45%" y="-40%" width="190%" height="205%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#8c7544" flood-opacity=".42"/>
+    </filter>
+  </defs>
+  <rect x="2" y="2" width="76" height="76" rx="19" fill="url(#base)"/>
+  <rect x="3" y="3" width="74" height="74" rx="18" fill="url(#light)"/>
+  <rect x="3" y="3" width="74" height="74" rx="18" stroke="#fff" stroke-opacity=".43" stroke-width=".8"/>
+  <path d="M14 8C18 5 23 5 31 5H55" stroke="white" stroke-opacity=".58" stroke-linecap="round"/>
+  <g filter="url(#shadow)">
+    <rect x="19" y="16" width="42" height="50" rx="5" transform="rotate(-5 40 40)" fill="#977e4b"/>
+    <rect x="20" y="14" width="42" height="49" rx="4" transform="rotate(3 40 40)" fill="url(#ivory)"/>
+    <path d="M30 29h22M30 36h19M30 43h22M30 50h13" stroke="#bebca0" stroke-width="1.7" stroke-linecap="round"/>
+    <rect x="17" y="23" width="9" height="3" rx="1.5" fill="#ddd9c1" stroke="#ad9b72" stroke-width=".6"/>
+    <rect x="17" y="33" width="9" height="3" rx="1.5" fill="#ddd9c1" stroke="#ad9b72" stroke-width=".6"/>
+    <rect x="17" y="43" width="9" height="3" rx="1.5" fill="#ddd9c1" stroke="#ad9b72" stroke-width=".6"/>
+    <rect x="17" y="53" width="9" height="3" rx="1.5" fill="#ddd9c1" stroke="#ad9b72" stroke-width=".6"/>
+    <path d="M49 60l5-15 5 3-10 12z" fill="#a47043"/>
+    <path d="M55 45l8-17a3 3 0 015 3l-9 18z" fill="#687d5d"/>
+    <path d="M64 29l-8 17" stroke="#a6b795" stroke-width="1.5"/>
+  </g>
+  <path d="M15 73c11 4 37 4 50-1" stroke="#122e21" stroke-opacity=".15" stroke-width="1.2" stroke-linecap="round"/>
+</svg>
