@@ -121,7 +121,7 @@ Soul OS reimagines desktop computing for the browser — combining native window
 <table style="border: none;">
   <tr>
     <td width="90" align="center" valign="middle">
-      <img src="https://github.com/akshat96af.png" width="80" style="border-radius: 50%;" alt="Akshat" />
+      <img src="https://images.weserv.nl/?url=https://github.com/akshat96af.png&amp;mask=circle&amp;w=160&amp;h=160" width="80" alt="Akshat" />
     </td>
     <td>
       <h3>Akshat</h3>
