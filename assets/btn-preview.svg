@@ -19,21 +19,27 @@
     </clipPath>
   </defs>
 
+  <style>
+    @keyframes sweepLoop {
+      0% {
+        transform: translateX(-150px) skewX(-20deg);
+      }
+      65%, 100% {
+        transform: translateX(360px) skewX(-20deg);
+      }
+    }
+    .sheen-beam {
+      animation: sweepLoop 3.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      will-change: transform;
+    }
+  </style>
+
   <!-- Sharp Rectangle Base -->
   <rect x="1" y="1" width="238" height="42" fill="url(#rectFill)" stroke="url(#rectBorder)" stroke-width="1.2"/>
 
-  <!-- Glitch-free smooth continuous light sweep -->
+  <!-- Glitch-free smooth CSS hardware sweep -->
   <g clip-path="url(#btnClip)">
-    <rect x="-100" y="-10" width="70" height="64" fill="url(#sheenGrad)" transform="skewX(-22)">
-      <animateTransform
-        attributeName="transform"
-        type="translate"
-        values="0 0; 380 0; 380 0"
-        keyTimes="0; 0.65; 1"
-        dur="4s"
-        repeatCount="indefinite"
-      />
-    </rect>
+    <rect y="-10" width="80" height="64" fill="url(#sheenGrad)" class="sheen-beam"/>
   </g>
 
   <!-- Precision Corner Brackets -->
