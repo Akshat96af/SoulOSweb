@@ -1,40 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="244" height="46" viewBox="0 0 244 46" fill="none">
   <defs>
-    <!-- face clip with 6px radius to fit inside 7px rounded border -->
     <clipPath id="face-clip">
       <rect x="1.5" y="1.5" width="241" height="43" rx="6" ry="6"/>
     </clipPath>
-
-    <!-- metallic body: 180deg dark alloy -->
     <linearGradient id="metal-body" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%"   stop-color="#181f15"/>
       <stop offset="45%"  stop-color="#10150d"/>
       <stop offset="100%" stop-color="#07090a"/>
     </linearGradient>
-
-    <!-- 135deg gradient edge border -->
     <linearGradient id="edge-border" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%"   stop-color="#92ad89" stop-opacity="0.55"/>
       <stop offset="38%"  stop-color="#3a4936" stop-opacity="0.18"/>
       <stop offset="62%"  stop-color="#3a4936" stop-opacity="0.18"/>
       <stop offset="100%" stop-color="#92ad89" stop-opacity="0.55"/>
     </linearGradient>
-
-    <!-- inner top ambient glow -->
     <linearGradient id="inner-ambient" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%"   stop-color="#c4ddbf" stop-opacity="0.14"/>
       <stop offset="70%"  stop-color="#c4ddbf" stop-opacity="0"/>
     </linearGradient>
-
-    <!-- top machined rim line -->
     <linearGradient id="rim-top-grad" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%"   stop-color="#c4ddbf" stop-opacity="0"/>
       <stop offset="20%"  stop-color="#c4ddbf" stop-opacity="0.4"/>
       <stop offset="80%"  stop-color="#c4ddbf" stop-opacity="0.4"/>
       <stop offset="100%" stop-color="#c4ddbf" stop-opacity="0"/>
     </linearGradient>
-
-    <!-- remake specular sheen: 100deg smooth gradient -->
     <linearGradient id="remake-sheen" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%"   stop-color="#ffffff" stop-opacity="0"/>
       <stop offset="18%"  stop-color="#ffffff" stop-opacity="0"/>
@@ -42,23 +31,16 @@
       <stop offset="82%"  stop-color="#ffffff" stop-opacity="0"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
-
-    <!-- soft bracket glow filter -->
     <filter id="bracket-filter" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="0" stdDeviation="1.5" flood-color="#8faa86" flood-opacity="0.45"/>
     </filter>
-
-    <!-- breathing glyph glow filter -->
     <filter id="glyph-filter" x="-30%" y="-30%" width="160%" height="160%">
       <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#8faa86" flood-opacity="0.4"/>
     </filter>
   </defs>
 
   <style>
-    /* 8s fluid sheen pass */
-    .sheen-sweep {
-      animation: sheenMotion 8s cubic-bezier(0.4, 0, 0.15, 1) infinite;
-    }
+    .sheen-sweep { animation: sheenMotion 8s cubic-bezier(0.4, 0, 0.15, 1) infinite; }
     @keyframes sheenMotion {
       0%   { transform: translateX(-90px) skewX(-16deg); opacity: 0; }
       6%   { opacity: 1; }
@@ -67,47 +49,25 @@
       39%  { transform: translateX(-90px) skewX(-16deg); opacity: 0; }
       100% { transform: translateX(-90px) skewX(-16deg); opacity: 0; }
     }
-
-    /* bracket breathing pulse */
-    .bracket-anim {
-      animation: bracketGlow 8s ease-in-out infinite;
-    }
+    .bracket-anim { animation: bracketGlow 8s ease-in-out infinite; }
     @keyframes bracketGlow {
-      0%, 100% { opacity: 0.6; }
-      45%      { opacity: 1; }
-      60%      { opacity: 0.6; }
+      0%, 100% { opacity: 0.6; } 45% { opacity: 1; } 60% { opacity: 0.6; }
     }
-
-    /* glyph aura breathe */
-    .glyph-anim {
-      animation: glyphBreathe 8s ease-in-out infinite;
-    }
+    .glyph-anim { animation: glyphBreathe 8s ease-in-out infinite; }
     @keyframes glyphBreathe {
-      0%, 100% { opacity: 0.85; }
-      45%      { opacity: 1; }
-      60%      { opacity: 0.85; }
+      0%, 100% { opacity: 0.85; } 45% { opacity: 1; } 60% { opacity: 0.85; }
     }
   </style>
 
-  <!-- base alloy body + 135deg gradient edge border (r=7px) -->
   <rect x="0.5" y="0.5" width="243" height="45" rx="7" ry="7" fill="url(#metal-body)" stroke="url(#edge-border)" stroke-width="1"/>
 
-  <!-- inner glass & rim lighting -->
   <g clip-path="url(#face-clip)">
-    <!-- subtle top ambient illumination -->
     <rect x="1.5" y="1.5" width="241" height="22" fill="url(#inner-ambient)"/>
-
-    <!-- inset top rim specular line -->
     <line x1="8" y1="2" x2="236" y2="2" stroke="url(#rim-top-grad)" stroke-width="1"/>
-
-    <!-- inset bottom shadow line -->
     <line x1="8" y1="44" x2="236" y2="44" stroke="#000000" stroke-opacity="0.4" stroke-width="1"/>
-
-    <!-- dynamic remake light sheen -->
     <rect class="sheen-sweep" x="0" y="-12" width="48" height="70" fill="url(#remake-sheen)"/>
   </g>
 
-  <!-- precision corner brackets (with glow & pulse) -->
   <g class="bracket-anim" filter="url(#bracket-filter)" stroke="#8faa86" stroke-width="1.4" stroke-linecap="square" fill="none">
     <path d="M3 10V3h7"/>
     <path d="M241 10V3h-7"/>
@@ -115,17 +75,14 @@
     <path d="M241 36v7h-7"/>
   </g>
 
-  <!-- soul glyph icon (breathe animation) -->
   <g class="glyph-anim" transform="translate(22, 15)" filter="url(#glyph-filter)" stroke="#8faa86" stroke-width="1.6" stroke-linecap="round" fill="none">
     <path d="M4 1c5 0 1 14 6 14"/>
     <path d="M.5 3.5c5 0 1 9 6 9"/>
     <path d="M8 1.5c5 0 1 9 6 9"/>
   </g>
 
-  <!-- typography: 600 weight, 0.15em tracking, uppercase SF Pro Text -->
   <text x="52" y="27.5" fill="#eef2ec" font-family="-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Inter,system-ui,sans-serif" font-size="11" font-weight="600" letter-spacing="1.65">LAUNCH LIVE DESKTOP</text>
 
-  <!-- action arrow icon -->
   <g transform="translate(216, 17)" stroke="#8faa86" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none">
     <path d="M2 10L10 2"/>
     <path d="M4 2h6v6"/>
