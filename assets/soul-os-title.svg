@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 100" width="100%" height="100" fill="none">
+  <defs>
+    <linearGradient id="streamGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667454">
+        <animate attributeName="stop-color" values="#667454;#75aeb9;#8c7544;#667454" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#88b9ac">
+        <animate attributeName="stop-color" values="#88b9ac;#cbb67c;#75aeb9;#88b9ac" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#667454">
+        <animate attributeName="stop-color" values="#667454;#75aeb9;#8c7544;#667454" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2d3728">
+        <animate attributeName="stop-color" values="#2d3728;#326b7e;#4a3f28;#2d3728" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#556345">
+        <animate attributeName="stop-color" values="#556345;#5b8e9b;#7c6b45;#556345" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#2d3728">
+        <animate attributeName="stop-color" values="#2d3728;#326b7e;#4a3f28;#2d3728" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    @media (prefers-color-scheme: dark) {
+      .title-text { fill: #eef3eb !important; }
+      .title-accent { fill: #9ec2ab !important; }
+      .soul-wave { stroke: #9ec2ab !important; }
+    }
+    .title-text {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 52px;
+      letter-spacing: -1.5px;
+      fill: url(#textGrad);
+    }
+    .title-accent {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif;
+      font-weight: 300;
+      font-size: 46px;
+      letter-spacing: 2px;
+      fill: url(#streamGrad);
+      opacity: 0.9;
+    }
+    .badge-caps {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 3px;
+      fill: #758a69;
+    }
+    .soul-wave {
+      stroke: url(#streamGrad);
+      stroke-width: 3.5;
+      stroke-linecap: round;
+      fill: none;
+      animation: waveFloat 3s ease-in-out infinite alternate;
+    }
+    @keyframes waveFloat {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-3px); }
+    }
+  </style>
+
+  <g transform="translate(140, 16)">
+    <!-- Soul Mark Icon with subtle float -->
+    <g class="soul-wave" transform="translate(0, 8) scale(1.15)">
+      <path d="M15 9c14 0 2 26 16 26">
+        <animate attributeName="stroke-dashoffset" values="0;50;0" dur="8s" repeatCount="indefinite" />
+      </path>
+      <path d="M8 15c14 0 2 20 16 20">
+        <animate attributeName="stroke-dashoffset" values="0;40;0" dur="8s" repeatCount="indefinite" />
+      </path>
+      <path d="M22 9c14 0 2 20 16 20">
+        <animate attributeName="stroke-dashoffset" values="0;40;0" dur="8s" repeatCount="indefinite" />
+      </path>
+    </g>
+
+    <!-- Title text -->
+    <text x="65" y="48" class="title-text">Soul<tspan class="title-accent">OS</tspan></text>
+    
+    <!-- Sub-tagline pills/edition -->
+    <rect x="252" y="24" width="76" height="22" rx="11" fill="#667454" fill-opacity="0.12"/>
+    <text x="264" y="39" class="badge-caps">EDITION 01</text>
+  </g>
+</svg>
