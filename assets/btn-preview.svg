@@ -1,70 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="240" height="44" viewBox="0 0 240 44" fill="none">
   <defs>
-    <!-- button shape clip -->
+    <!-- button boundary clip -->
     <clipPath id="btn-clip">
       <rect x="1" y="1" width="238" height="42"/>
     </clipPath>
 
-    <!-- dark tactical background -->
+    <!-- tactical matte background -->
     <linearGradient id="btn-bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#182017"/>
       <stop offset="100%" stop-color="#0b100a"/>
     </linearGradient>
 
-    <!-- perimeter border -->
+    <!-- precision border -->
     <linearGradient id="btn-edge" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#8faa86" stop-opacity="0.55"/>
-      <stop offset="50%" stop-color="#3b4838" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#2d372a" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="#8faa86" stop-opacity="0.45"/>
     </linearGradient>
 
-    <!-- luxury specular sheen ray -->
-    <linearGradient id="beam" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
-      <stop offset="28%" stop-color="#9fc298" stop-opacity="0.06"/>
-      <stop offset="44%" stop-color="#d4ecd0" stop-opacity="0.32"/>
-      <stop offset="49%" stop-color="#ffffff" stop-opacity="0.9"/>
-      <stop offset="50%" stop-color="#ffffff" stop-opacity="1"/>
-      <stop offset="51%" stop-color="#ffffff" stop-opacity="0.9"/>
-      <stop offset="56%" stop-color="#d4ecd0" stop-opacity="0.32"/>
-      <stop offset="72%" stop-color="#9fc298" stop-opacity="0.06"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    <!-- top micro-rim chamfer -->
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.04"/>
+      <stop offset="50%" stop-color="#8faa86" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.04"/>
     </linearGradient>
 
-    <!-- subtle top rim light -->
-    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
-      <stop offset="20%" stop-color="#8faa86" stop-opacity="0.35"/>
-      <stop offset="80%" stop-color="#8faa86" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    <!-- AE motion laser: razor specular core slit -->
+    <linearGradient id="laser-core" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8faa86" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#9fc298" stop-opacity="0.12"/>
+      <stop offset="44%" stop-color="#cde8c7" stop-opacity="0.6"/>
+      <stop offset="48.5%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="51.5%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="56%" stop-color="#cde8c7" stop-opacity="0.6"/>
+      <stop offset="75%" stop-color="#9fc298" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#8faa86" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- AE motion laser: trailing ghost hairline echo -->
+    <linearGradient id="laser-echo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8faa86" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#c2e3bd" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#8faa86" stop-opacity="0"/>
     </linearGradient>
   </defs>
 
   <style>
-    .sheen {
-      animation: sweep 4.8s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+    .ae-streak {
+      animation: laserSweep 4.6s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
     }
-    @keyframes sweep {
+    @keyframes laserSweep {
       0% {
-        transform: translateX(-150px) skewX(-24deg);
+        transform: translateX(-100px) skewX(-28deg);
         opacity: 0;
       }
-      4% {
-        opacity: 0.95;
+      2.5% {
+        opacity: 1;
       }
-      30% {
-        opacity: 0.95;
+      26% {
+        opacity: 1;
       }
-      36% {
-        transform: translateX(310px) skewX(-24deg);
+      31% {
+        transform: translateX(290px) skewX(-28deg);
         opacity: 0;
       }
-      37% {
-        transform: translateX(-150px) skewX(-24deg);
+      32% {
+        transform: translateX(-100px) skewX(-28deg);
         opacity: 0;
       }
       100% {
-        transform: translateX(-150px) skewX(-24deg);
+        transform: translateX(-100px) skewX(-28deg);
         opacity: 0;
       }
     }
@@ -73,12 +79,17 @@
   <!-- base background -->
   <rect x="1" y="1" width="238" height="42" fill="url(#btn-bg)" stroke="url(#btn-edge)" stroke-width="1"/>
 
-  <!-- top rim highlight -->
+  <!-- top edge rim highlight -->
   <line x1="2" y1="1.5" x2="238" y2="1.5" stroke="url(#rim)" stroke-width="1"/>
 
-  <!-- dynamic light sweep -->
+  <!-- After Effects style dual-streak optical pass -->
   <g clip-path="url(#btn-clip)">
-    <rect class="sheen" x="0" y="-8" width="96" height="58" fill="url(#beam)"/>
+    <g class="ae-streak">
+      <!-- trailing secondary hairline echo (8px behind) -->
+      <rect x="0" y="-8" width="4" height="60" fill="url(#laser-echo)"/>
+      <!-- primary razor laser slit (sharp 26px profile) -->
+      <rect x="12" y="-8" width="26" height="60" fill="url(#laser-core)"/>
+    </g>
   </g>
 
   <!-- corner brackets -->
@@ -97,6 +108,6 @@
   <!-- typography -->
   <text x="50" y="26.5" fill="#f0f3ee" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.5">LAUNCH LIVE DESKTOP</text>
 
-  <!-- terminal arrow centered -->
+  <!-- terminal arrow -->
   <path d="M209 25l5.5-5.5m0 0h-4.5m4.5 0v4.5" stroke="#8faa86" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
