@@ -1,49 +1,102 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="240" height="44" viewBox="0 0 240 44" fill="none">
   <defs>
-    <clipPath id="c"><rect x="1" y="1" width="238" height="42"/></clipPath>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#1a2118"/>
-      <stop offset="1" stop-color="#0d120c"/>
+    <!-- button shape clip -->
+    <clipPath id="btn-clip">
+      <rect x="1" y="1" width="238" height="42"/>
+    </clipPath>
+
+    <!-- dark tactical background -->
+    <linearGradient id="btn-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#182017"/>
+      <stop offset="100%" stop-color="#0b100a"/>
     </linearGradient>
-    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#7a9472" stop-opacity=".6"/>
-      <stop offset="1" stop-color="#2a3228" stop-opacity=".3"/>
+
+    <!-- perimeter border -->
+    <linearGradient id="btn-edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8faa86" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#3b4838" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#8faa86" stop-opacity="0.45"/>
+    </linearGradient>
+
+    <!-- luxury specular sheen ray -->
+    <linearGradient id="beam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="28%" stop-color="#9fc298" stop-opacity="0.06"/>
+      <stop offset="44%" stop-color="#d4ecd0" stop-opacity="0.32"/>
+      <stop offset="49%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="51%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="56%" stop-color="#d4ecd0" stop-opacity="0.32"/>
+      <stop offset="72%" stop-color="#9fc298" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- subtle top rim light -->
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="20%" stop-color="#8faa86" stop-opacity="0.35"/>
+      <stop offset="80%" stop-color="#8faa86" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
     </linearGradient>
   </defs>
 
   <style>
-    .sweep { animation: s 5s linear infinite; }
-    @keyframes s {
-      0%   { opacity:0; transform: translateX(-120px) skewX(-25deg); }
-      15%  { opacity:1; }
-      50%  { opacity:1; }
-      65%  { opacity:0; transform: translateX(340px) skewX(-25deg); }
-      100% { opacity:0; transform: translateX(340px) skewX(-25deg); }
+    .sheen {
+      animation: sweep 4.8s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+    }
+    @keyframes sweep {
+      0% {
+        transform: translateX(-150px) skewX(-24deg);
+        opacity: 0;
+      }
+      4% {
+        opacity: 0.95;
+      }
+      30% {
+        opacity: 0.95;
+      }
+      36% {
+        transform: translateX(310px) skewX(-24deg);
+        opacity: 0;
+      }
+      37% {
+        transform: translateX(-150px) skewX(-24deg);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(-150px) skewX(-24deg);
+        opacity: 0;
+      }
     }
   </style>
 
-  <!-- body -->
-  <rect x="1" y="1" width="238" height="42" fill="url(#bg)" stroke="url(#edge)" stroke-width=".8"/>
+  <!-- base background -->
+  <rect x="1" y="1" width="238" height="42" fill="url(#btn-bg)" stroke="url(#btn-edge)" stroke-width="1"/>
 
-  <!-- light sweep -->
-  <g clip-path="url(#c)">
-    <rect x="0" y="-4" width="60" height="52" rx="2" fill="white" opacity="0" class="sweep" style="mix-blend-mode:soft-light"/>
+  <!-- top rim highlight -->
+  <line x1="2" y1="1.5" x2="238" y2="1.5" stroke="url(#rim)" stroke-width="1"/>
+
+  <!-- dynamic light sweep -->
+  <g clip-path="url(#btn-clip)">
+    <rect class="sheen" x="0" y="-8" width="96" height="58" fill="url(#beam)"/>
   </g>
 
-  <!-- corner ticks -->
+  <!-- corner brackets -->
   <path d="M1 8V1h7" stroke="#8faa86" stroke-width="1.5" stroke-linecap="square"/>
   <path d="M239 8V1h-7" stroke="#8faa86" stroke-width="1.5" stroke-linecap="square"/>
   <path d="M1 36v7h7" stroke="#8faa86" stroke-width="1.5" stroke-linecap="square"/>
   <path d="M239 36v7h-7" stroke="#8faa86" stroke-width="1.5" stroke-linecap="square"/>
 
-  <!-- soul glyph -->
+  <!-- soul glyph icon -->
   <g transform="translate(22,14)" stroke="#8faa86" stroke-width="1.8" stroke-linecap="round" fill="none">
-    <path d="M4 0c5 0 1 15 6 15"/><path d="M0 3c5 0 1 11 6 11"/><path d="M8 0c5 0 1 11 6 11"/>
+    <path d="M4 0c5 0 1 15 6 15"/>
+    <path d="M0 3c5 0 1 11 6 11"/>
+    <path d="M8 0c5 0 1 11 6 11"/>
   </g>
 
-  <!-- label -->
-  <text x="50" y="26.5" fill="#eef1ec" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.5">LAUNCH LIVE DESKTOP</text>
+  <!-- typography -->
+  <text x="50" y="26.5" fill="#f0f3ee" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.5">LAUNCH LIVE DESKTOP</text>
 
-  <!-- arrow -->
-  <path d="M210 16l6-6m0 0h-5m5 0v5" stroke="#8faa86" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- terminal arrow centered -->
+  <path d="M209 25l5.5-5.5m0 0h-4.5m4.5 0v4.5" stroke="#8faa86" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
